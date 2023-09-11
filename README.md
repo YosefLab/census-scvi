@@ -2,7 +2,7 @@
 
 ## Instructions for running in AWS
 
-1. Launch an instance with the [Deep Learning Base GPU AMI](https://aws.amazon.com/releasenotes/aws-deep-learning-base-gpu-ami-ubuntu-20-04/)
+1. Launch an instance with the [Deep Learning Base GPU AMI](https://aws.amazon.com/releasenotes/aws-deep-learning-base-gpu-ami-ubuntu-20-04/). Note that this AMI currently only supports P5, P4de, P4d, P3, G5, G3, and G4dn instances.
 
 2. Log into the instance and configure GPUs to run inside Docker containers
    ```
