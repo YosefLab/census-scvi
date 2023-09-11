@@ -40,3 +40,10 @@
    ```
    docker exec -d autotune python /census-scvi/bin/autotune_scvi_v2.py --adata_path path_to_adata --batch_key batch_key --num_cpus num_cpus --num_gpus num_gpus --experiment_name experiment_name --save_dir /data
    ```
+
+7. After the experiment finishes, you can stop the container
+   ```
+   docker stop autotune
+   ```
+
+8. All logs are stored in the `save_dir` argument passed into (6)
