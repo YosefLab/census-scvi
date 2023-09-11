@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import os
 import pathlib
+import sys
 from inspect import signature
 from typing import Callable
 
@@ -28,6 +30,10 @@ TRAIN_KWARGS = {
         "lr": 1e-4,
     },
     "batch_size": 1024
+}
+
+SCHEDULER_KWARGS = {
+    "grace_period": 5,
 }
 
 
@@ -72,6 +78,9 @@ def fit_tuner(
     save_dir: str,
     num_samples: int = 10,
     max_epochs: int = 20,
+    scheduler: str = "asha",
+    searcher: str = "hyperopt",
+    scheduler_kwargs: dict = SCHEDULER_KWARGS,
 ):
     return tuner.fit(
         adata,
@@ -82,8 +91,9 @@ def fit_tuner(
         use_defaults=False,
         num_samples=num_samples,
         max_epochs=max_epochs,
-        scheduler="asha",
-        searcher="hyperopt",
+        scheduler=scheduler,
+        searcher=searcher,
+        scheduler_kwargs=scheduler_kwargs,
         resources={"cpu": num_cpus, "gpu": num_gpus},
         seed=seed,
         experiment_name=experiment_name,
@@ -101,6 +111,15 @@ def main(
     experiment_name: str = "autotune_scvi_v2",
     save_dir: str = "/data",
 ):
+    logging_dir = os.path.join(save_dir, experiment_name)
+    stdout_path = os.path.join(logging_dir, "stdout.log")
+    stderr_path = os.path.join(logging_dir, "stderr.log")
+    make_parents(stdout_path, stderr_path)
+    stdout_handle = open(stdout_path, "w")
+    stderr_handle = open(stderr_path, "w")
+    sys.stdout = stdout_handle
+    sys.stderr = stderr_handle
+
     adata = load_anndata(adata_path)
     setup_anndata(adata, batch_key)
     tuner = setup_tuner()
@@ -117,6 +136,8 @@ def main(
         save_dir,
     )
 
+    stdout_handle.close()
+    stderr_handle.close()
 
 if __name__ == "__main__":
     main()

@@ -38,5 +38,5 @@
 
 6. Execute the autotune script in the container
    ```
-   docker exec autotune python /census-scvi/bin/autotune_scvi_v2.py --adata_path path_to_adata --batch_key batch_key --num_cpus num_cpus --num_gpus num_gpus --experiment_name homo_sapiens_scvi --save_dir /data
+   docker exec -d autotune python /census-scvi/bin/autotune_scvi_v2.py --adata_path path_to_adata --batch_key batch_key --num_cpus num_cpus --num_gpus num_gpus --experiment_name experiment_name --save_dir /data
    ```
