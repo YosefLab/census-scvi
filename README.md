@@ -28,7 +28,7 @@
 
 4. Run the container in detached mode with a mounted volume
    ```
-   docker run --name autotune --gpus all --volume /data:/data -dit martinkim0/scvi-tools:py3.11-cu11-autotune-main /bin/bash
+   docker run --name autotune --rm --gpus all --volume /data:/data -dit martinkim0/scvi-tools:py3.11-cu11-autotune-main /bin/bash
    ```
 
 5. Copy the repository into the container

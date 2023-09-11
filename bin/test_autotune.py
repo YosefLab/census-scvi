@@ -66,3 +66,7 @@ def main():
     setup_anndata(adata)
     tuner = setup_tuner()
     fit_tuner(tuner, adata, SEARCH_SPACE)
+
+
+if __name__ == "__main__":
+    main()
