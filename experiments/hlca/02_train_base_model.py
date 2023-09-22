@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import logging
 import os
 import pathlib
@@ -12,6 +13,14 @@ import anndata
 import click
 import lightning.pytorch as pl
 from embedding_scvi import EmbeddingSCVI
+
+
+
+def load_config(config_path: str) -> dict:
+    """Load a JSON configuration file as a Python dictionary."""
+    with open(config_path) as f:
+        config = json.load(f)
+    return config
 
 
 def make_parents(*paths) -> None:
@@ -28,14 +37,17 @@ def wrap_kwargs(fn: callable) -> callable:
 
 
 @wrap_kwargs
-def main(
-    adata_path: str,
-    save_path: str,
-    categorical_covariate_keys: list[str],
-    experiment_name: str,
-    seed: int,
-    max_epochs: int,
-):
+def main(config_path: str):
+    config = load_config(config_path)
+    adata_path = config["adata_path"]
+    save_path = config["save_path"]
+    categorical_covariate_keys = config["categorical_covariate_keys"]
+    experiment_name = config["experiment_name"]
+    seed = config.get("seed", 2023)
+    model_kwargs = config.get("model_kwargs", {})
+    train_kwargs = config.get("train_kwargs", {})
+    plan_kwargs = config.get("plan_kwargs", {})
+
     logging_dir = os.path.join(save_path, experiment_name)
     stdout_path = os.path.join(logging_dir, "stdout.log")
     stderr_path = os.path.join(logging_dir, "stderr.log")
@@ -47,9 +59,6 @@ def main(
     sys.stderr = stderr_handle
     logging.basicConfig(filename=logs_path, filemode="w")
 
-    categorical_covariate_keys = categorical_covariate_keys.split(",")
-    seed = int(seed)
-    max_epochs = int(max_epochs)
     scvi.settings.seed = seed
     torch.set_float32_matmul_precision("medium")
 
@@ -59,23 +68,12 @@ def main(
         categorical_covariate_keys=categorical_covariate_keys
     )
 
-    model = EmbeddingSCVI(adata)
+    model = EmbeddingSCVI(adata, **model_kwargs)
     logger = pl.loggers.TensorBoardLogger(logging_dir)
     model.train(
-        max_epochs=max_epochs,
-        batch_size=1024,
-        load_sparse_tensor=True,
-        early_stopping=True,
-        early_stopping_patience=5,
-        check_val_every_n_epoch=1,
+        plan_kwargs=plan_kwargs,
         logger=logger,
-        plan_kwargs={
-            "lr": 1e-4,
-            "reduce_lr_on_plateau": True,
-            "n_epochs_kl_warmup": 0,
-            "min_kl_weight": 0.25,
-            "max_kl_weight": 0.25,
-        },
+        **train_kwargs,
     )
 
     model.save(
