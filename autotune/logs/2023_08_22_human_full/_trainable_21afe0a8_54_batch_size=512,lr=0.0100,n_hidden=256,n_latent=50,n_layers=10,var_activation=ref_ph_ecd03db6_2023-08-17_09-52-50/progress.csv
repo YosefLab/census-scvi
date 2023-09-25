@@ -1,0 +1,2 @@
+validation_loss,time_this_iter_s,done,training_iteration,trial_id,date,timestamp,time_total_s,pid,hostname,node_ip,time_since_restore,iterations_since_restore
+16835.0625,669.954530954361,True,1,21afe0a8,2023-08-17_10-08-17,1692266897,669.954530954361,19767,ip-172-31-38-240,172.31.38.240,669.954530954361,1

@@ -1,0 +1,3 @@
+:actor_name:_trainable
+/home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+  categorical_mapping = _make_column_categorical(
