@@ -1,0 +1,85 @@
+/home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+  categorical_mapping = _make_column_categorical(
+/home/bruce/scvi/venv/lib/python3.10/site-packages/ray/air/config.py:803: UserWarning: Setting a `RunConfig.local_dir` is deprecated and will be removed in the future. If you are not using remote storage,set the `RunConfig.storage_path` instead. Otherwise, set the`RAY_AIR_LOCAL_CACHE_DIR` environment variable to control the local cache location.
+  warnings.warn(
+[2m[36m(_trainable pid=124389)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=124389)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=124389)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=124389)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=124389)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=124389)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=124389)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=124389)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_1d75aa76_lightning
+[2m[36m(_trainable pid=124567)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=124567)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=124389)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[2m[36m(_trainable pid=124567)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=124567)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=124567)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=124567)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=126333)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=126333)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=126333)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=126333)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=126333)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=126333)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=124567)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=124567)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_69997923_lightning
+[2m[36m(_trainable pid=124567)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [1]
+[2m[36m(_trainable pid=126333)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=126333)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_d290ecd7_lightning
+[2m[36m(_trainable pid=126501)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=126501)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=126333)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [2]
+[2m[36m(_trainable pid=127464)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=127464)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=126501)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=126501)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=126501)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=126501)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=127464)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=127464)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=127464)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=127464)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=126501)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=126501)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_456e59db_lightning
+[2m[36m(_trainable pid=126501)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [3]
+[2m[36m(_trainable pid=127464)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=127464)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_892657d1_lightning
+[2m[36m(_trainable pid=127464)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [4]
+[2m[36m(_trainable pid=128427)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=128427)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=128427)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=128427)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=128427)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=128427)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=129389)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=129389)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=128427)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=128427)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_a61a3505_lightning
+[2m[36m(_trainable pid=128427)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [5]
+[2m[36m(_trainable pid=129389)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=129389)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=129389)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=129389)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=129389)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=129389)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_54d892e7_lightning
+[2m[36m(_trainable pid=130351)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=130351)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=129389)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [6]
+[2m[36m(_trainable pid=130351)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=130351)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=130351)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=130351)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=130351)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7]
+[2m[36m(_trainable pid=130351)[0m /home/bruce/scvi/venv/lib/python3.10/site-packages/scvi/data/fields/_dataframe_field.py:189: UserWarning: Category 83 in adata.obs['_scvi_batch'] has fewer than 3 cells. Models may not train properly.
+[2m[36m(_trainable pid=130351)[0m   categorical_mapping = _make_column_categorical(
+[2m[36m(_trainable pid=130351)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=130351)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_835632db_lightning
+[2m[36m(_trainable pid=130351)[0m GPU available: True (cuda), used: True
+[2m[36m(_trainable pid=130351)[0m TPU available: False, using: 0 TPU cores
+[2m[36m(_trainable pid=130351)[0m IPU available: False, using: 0 IPUs
+[2m[36m(_trainable pid=130351)[0m HPU available: False, using: 0 HPUs
+[2m[36m(_trainable pid=130351)[0m You are using a CUDA device ('NVIDIA A10G') that has Tensor Cores. To properly utilize them, you should set `torch.set_float32_matmul_precision('medium' | 'high')` which will trade-off precision for performance. For more details, read https://pytorch.org/docs/stable/generated/torch.set_float32_matmul_precision.html#torch.set_float32_matmul_precision
+[2m[36m(_trainable pid=130351)[0m Missing logger folder: /home/bruce/scvi/autotune_data/mus_musculus_autotune_scvi_v2/_trainable_51db0674_lightning
+[2m[36m(_trainable pid=130351)[0m LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [7]

@@ -1,0 +1,27 @@
+{
+    "adata_path": "/home/martinkim/data/hlca/hlca_extension.h5ad",
+    "save_path": "/home/martinkim/data/hlca/models",
+    "experiment_name": "dataset_assay_validation_loss",
+    "categorical_covariate_keys": [
+        "dataset",
+        "assay"
+    ],
+    "model_kwargs": {},
+    "train_kwargs": {
+        "max_epochs": 300,
+        "batch_size": 1024,
+        "load_sparse_tensor": true,
+        "early_stopping": true,
+        "early_stopping_patience": 20,
+        "early_stopping_monitor": "validation_loss",
+        "check_val_every_n_epoch": 1,
+        "train_size": 0.95
+    },
+    "plan_kwargs": {
+        "lr": 0.0001,
+        "reduce_lr_on_plateau": true,
+        "n_epochs_kl_warmup": 0,
+        "min_kl_weight": 0.25,
+        "max_kl_weight": 0.25
+    }
+}

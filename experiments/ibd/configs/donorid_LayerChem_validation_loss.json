@@ -1,0 +1,28 @@
+{
+    "adata_path": "/home/martinkim/data/ibd/ibd_all.h5ad",
+    "save_path": "/home/martinkim/data/ibd/models",
+    "experiment_name": "donorid_LayerChem_validation_loss",
+    "layer": "counts",
+    "categorical_covariate_keys": [
+        "donor_id",
+        "Layer_Chem"
+    ],
+    "model_kwargs": {},
+    "train_kwargs": {
+        "max_epochs": 600,
+        "batch_size": 1024,
+        "load_sparse_tensor": true,
+        "early_stopping": true,
+        "early_stopping_patience": 40,
+        "early_stopping_monitor": "validation_loss",
+        "check_val_every_n_epoch": 1,
+        "train_size": 0.95
+    },
+    "plan_kwargs": {
+        "lr": 0.0001,
+        "reduce_lr_on_plateau": true,
+        "n_epochs_kl_warmup": 0,
+        "min_kl_weight": 0.5,
+        "max_kl_weight": 0.5
+    }
+}
