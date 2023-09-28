@@ -116,7 +116,7 @@ def plot_trials(
         borderaxespad=0,
     )
     
-    plt.xlabel("Iterations")
+    plt.xlabel("epoch")
     plt.ylabel(metric)
     plt.show()
     
