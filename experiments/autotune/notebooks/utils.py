@@ -3,6 +3,11 @@ import os
 
 import matplotlib.pyplot as plt
 import pandas as pd
+import seaborn as sns
+
+sns.set_theme()
+sns.set(font="Lato")
+sns.set_palette("Dark2")
 
 
 def get_trial_dirs(
@@ -34,7 +39,7 @@ def get_trial_dirs(
 
 
 def get_trial_ids(trial_dirs: list[str]) -> list[str]:
-    return [trial_dir.split("_")[3] for trial_dir in trial_dirs]
+    return [trial_dir.split("_")[2] for trial_dir in trial_dirs]
 
 
 def get_trial_params(
